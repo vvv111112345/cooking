@@ -1,0 +1,595 @@
+/* Обновленные глобальные стили */
+:root {
+  --primary-color: #5e1515;
+  --secondary-color: #0f3b38;
+  --dark-color: #021d3c;
+  --light-color: #f8f9fa;
+  --accent-color: #dfb451;
+  --gray-light: #e9ecef;
+  --gray-medium: #adb5bd;
+  --gray-dark: #495057;
+  --danger-color: #dc3545;
+  --success-color: #28a745;
+  --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --transition: all 0.3s ease;
+  --border-radius: 8px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-main);
+  line-height: 1.6;
+  color: var(--dark-color);
+  background-color: var(--light-color);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  text-decoration: none;
+  color: var(--primary-color);
+  transition: var(--transition);
+}
+
+a:hover {
+  color: var(--accent-color);
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  flex: 1;
+}
+
+/* Стили для header */
+header {
+  background-color: white;
+  box-shadow: var(--shadow);
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+header h1 {
+  color: var(--primary-color);
+  text-align: center;
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}
+
+.user-panel {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+}
+
+.user-panel span {
+  font-weight: bold;
+  color: var(--dark-color);
+}
+
+/* Кнопки */
+.btn {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: var(--border-radius);
+  font-weight: 500;
+  transition: var(--transition);
+  border: none;
+  cursor: pointer;
+  text-align: center;
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #6e2424;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
+}
+
+.btn-secondary {
+  background-color: var(--secondary-color);
+  color: white;
+}
+
+.btn-secondary:hover {
+  background-color: #1a4d48;
+}
+
+.btn-danger {
+  background-color: var(--danger-color);
+  color: white;
+}
+
+.btn-danger:hover {
+  background-color: #c82333;
+}
+
+.btn-accent {
+  background-color: var(--accent-color);
+  color: var(--dark-color);
+}
+
+.btn-accent:hover {
+  background-color: #e6c476;
+}
+
+/* Карточки рецептов */
+.recipe-card {
+  background: white;
+  border-radius: var(--border-radius);
+  padding: 1.5rem;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+  margin-bottom: 1.5rem;
+  border: 1px solid var(--gray-light);
+}
+
+.recipe-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.recipe-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+  color: var(--primary-color);
+}
+
+.recipe-meta {
+  display: flex;
+  gap: 1rem;
+  margin: 0.5rem 0;
+  color: var(--gray-dark);
+  font-size: 0.9rem;
+}
+
+.recipe-meta i {
+  margin-right: 0.3rem;
+}
+
+/* Страница рецепта */
+.recipe-header {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.recipe-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: var(--border-radius);
+  margin: 1rem 0;
+  box-shadow: var(--shadow);
+}
+
+.recipe-actions {
+  display: flex;
+  gap: 1rem;
+  margin: 1rem 0;
+  justify-content: center;
+}
+
+.recipe-details {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.ingredients, .instructions {
+  background: white;
+  padding: 1.5rem;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  margin-bottom: 1.5rem;
+}
+
+.ingredients h3, .instructions h3 {
+  margin-bottom: 1rem;
+  color: var(--primary-color);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.ingredients ul {
+  list-style: none;
+}
+
+.ingredients li {
+  padding: 0.5rem 0;
+  border-bottom: 1px dashed var(--gray-medium);
+}
+
+.instructions ol {
+  padding-left: 1.5rem;
+}
+
+.instructions li {
+  margin-bottom: 1rem;
+}
+
+/* Комментарии */
+.comments-section {
+  margin-top: 3rem;
+}
+
+.comment-form {
+  margin-bottom: 2rem;
+}
+
+.comment-form textarea {
+  width: 100%;
+  min-height: 120px;
+  padding: 1rem;
+  border: 1px solid var(--gray-medium);
+  border-radius: var(--border-radius);
+  margin-bottom: 1rem;
+  resize: vertical;
+  font-family: var(--font-main);
+}
+
+.comment {
+  background: white;
+  padding: 1.5rem;
+  border-radius: var(--border-radius);
+  margin-bottom: 1.5rem;
+  box-shadow: var(--shadow);
+}
+
+.comment-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+  color: var(--gray-dark);
+  font-size: 0.9rem;
+}
+
+/* Формы */
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.form-control {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid var(--gray-medium);
+  border-radius: var(--border-radius);
+  font-family: var(--font-main);
+  transition: var(--transition);
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 2px rgba(94, 21, 21, 0.2);
+}
+
+textarea.form-control {
+  min-height: 150px;
+}
+
+/* Футер */
+footer {
+  text-align: center;
+  padding: 2rem 0;
+  margin-top: 3rem;
+  color: var(--gray-dark);
+  border-top: 1px solid var(--gray-medium);
+  background: white;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .recipe-details {
+    grid-template-columns: 1fr;
+  }
+  
+  .user-panel {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+  }
+  
+  header h1 {
+    font-size: 1.5rem;
+  }
+}
+
+/* Специфические стили для add_recipe.php */
+.recipe-form {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: white;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+}
+
+.image-preview {
+  max-width: 300px;
+  margin: 1rem 0;
+  display: none;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+}
+
+/* Утилиты */
+.text-center {
+  text-align: center;
+}
+
+.mt-1 { margin-top: 0.5rem; }
+.mt-2 { margin-top: 1rem; }
+.mt-3 { margin-top: 1.5rem; }
+.mt-4 { margin-top: 2rem; }
+.mb-1 { margin-bottom: 0.5rem; }
+.mb-2 { margin-bottom: 1rem; }
+.mb-3 { margin-bottom: 1.5rem; }
+.mb-4 { margin-bottom: 2rem; }
+
+/* Стили для страниц аутентификации */
+.auth-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: var(--light-color);
+    padding: 20px;
+}
+
+.auth-card {
+    background: white;
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    width: 100%;
+    max-width: 450px;
+}
+
+.auth-card h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: var(--primary-color);
+}
+
+.auth-form .form-group {
+    margin-bottom: 1.2rem;
+}
+
+.auth-form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.auth-form .form-control {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid var(--gray-medium);
+    border-radius: var(--border-radius);
+}
+
+.btn-block {
+    display: block;
+    width: 100%;
+    padding: 0.75rem;
+}
+
+.auth-links {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1.5rem;
+    font-size: 0.9rem;
+}
+
+/* Стили для форм редактирования */
+.edit-form {
+    background: white;
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    margin-top: 2rem;
+}
+
+.form-actions {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+    justify-content: flex-end;
+}
+
+.current-image {
+    margin: 1rem 0;
+    padding: 1rem;
+    background: var(--gray-light);
+    border-radius: var(--border-radius);
+}
+
+.current-image img {
+    max-width: 200px;
+    height: auto;
+    display: block;
+    margin-top: 0.5rem;
+    border-radius: 4px;
+}
+
+/* Адаптивные стили */
+@media (max-width: 768px) {
+    .auth-card {
+        padding: 1.5rem;
+    }
+    
+    .form-actions {
+        flex-direction: column;
+    }
+    
+    .form-actions .btn {
+        width: 100%;
+    }
+}
+
+/* Аутентификация */
+.auth-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: var(--light-color);
+    padding: 20px;
+    background-image: linear-gradient(rgba(255,255,255,0.9), rgba(255,255,255,0.9)), 
+                      url('../images/cooking-bg.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.auth-card {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 450px;
+    border: 1px solid var(--gray-light);
+}
+
+.auth-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.auth-header h2 {
+    color: var(--primary-color);
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.auth-header p {
+    color: var(--gray-dark);
+    font-size: 0.95rem;
+}
+
+.auth-header i {
+    margin-right: 10px;
+}
+
+.auth-form {
+    margin-top: 1.5rem;
+}
+
+.auth-form .form-group {
+    margin-bottom: 1.5rem;
+}
+
+.auth-form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: var(--dark-color);
+}
+
+.auth-form .form-control {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid var(--gray-medium);
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: var(--transition);
+}
+
+.auth-form .form-control:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(94, 21, 21, 0.1);
+}
+
+.auth-form .form-check {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.auth-form .form-check-input {
+    margin-right: 10px;
+}
+
+.auth-footer {
+    margin-top: 1.5rem;
+    text-align: center;
+}
+
+.auth-link {
+    color: var(--primary-color);
+    font-weight: 500;
+    transition: var(--transition);
+    display: inline-flex;
+    align-items: center;
+    margin: 0 10px;
+}
+
+.auth-link:hover {
+    color: var(--accent-color);
+    text-decoration: none;
+}
+
+.auth-link i {
+    margin-right: 5px;
+    font-size: 0.9rem;
+}
+
+.btn-block {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.btn-block i {
+    margin-right: 8px;
+}
+
+/* Адаптивность */
+@media (max-width: 576px) {
+    .auth-card {
+        padding: 1.5rem;
+    }
+    
+    .auth-header h2 {
+        font-size: 1.5rem;
+    }
+    
+    .auth-footer {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .auth-link {
+        margin: 5px 0;
+    }
+}
+
+input, textarea, select {
+    font-family: var(--font-main);
+    font-size: 1rem;
+}

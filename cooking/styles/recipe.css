@@ -1,0 +1,142 @@
+:root {
+  --primary: #FF6B6B;
+  --primary-light: #FF8E8E;
+  --primary-dark: #FF4757;
+  --secondary: #70A1FF;
+  --dark: #2F3542;
+  --gray: #A4B0BE;
+  --light: #F8F9FA;
+  --border: #E0E0E0;
+  --radius: 12px;
+  --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.recipe-container {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  color: var(--primary);
+  text-decoration: none;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+
+.back-link:hover {
+  text-decoration: underline;
+}
+
+.recipe-full {
+  background: white;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+.recipe-header {
+  padding: 2rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.recipe-header h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.2rem;
+  color: var(--dark);
+  margin-bottom: 1rem;
+}
+
+.recipe-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  color: var(--gray);
+  font-size: 0.9rem;
+}
+
+.recipe-meta i {
+  margin-right: 0.3rem;
+}
+
+.recipe-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+@media (max-width: 768px) {
+  .recipe-content {
+    grid-template-columns: 1fr;
+  }
+}
+
+.recipe-image {
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.recipe-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.recipe-details {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+section {
+  background: var(--light);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+}
+
+h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: var(--dark);
+  display: flex;
+  align-items: center;
+}
+
+h2 i {
+  margin-right: 0.5rem;
+}
+
+.ingredients-list {
+  list-style: none;
+}
+
+.ingredients-list li {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 0;
+  border-bottom: 1px dashed var(--border);
+}
+
+.ingredient-name {
+  font-weight: 600;
+}
+
+.ingredient-quantity {
+  color: var(--gray);
+}
+
+.instructions-text {
+  white-space: pre-line;
+  line-height: 1.6;
+}
+
+/* Иконки */
+.icon-arrow-left::before { content: "←"; }
+.icon-clock::before { content: "⏱"; }
+.icon-portion::before { content: "🍽"; }
+.icon-ingredients::before { content: "📋"; }
+.icon-instructions::before { content: "👨‍🍳"; }

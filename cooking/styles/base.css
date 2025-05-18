@@ -1,0 +1,54 @@
+/* Базовые сбросы и переменные */
+:root {
+  --primary: #ff6b6b;
+  --primary-light: #ff8e8e;
+  --primary-dark: #ff4757;
+  --secondary: #70a1ff;
+  --accent: #7bed9f;
+  --dark: #2f3542;
+  --dark-light: #57606f;
+  --light: #f1f2f6;
+  --light-dark: #dfe4ea;
+  --success: #2ed573;
+  --warning: #ffa502;
+  --danger: #ff4757;
+  --radius: 12px;
+  --shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  --transition: all 0.3s ease;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  line-height: 1.6;
+  color: var(--dark);
+  background-color: #f8f9fa;
+  min-height: 100vh;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+  font-family: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.container {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px;
+}

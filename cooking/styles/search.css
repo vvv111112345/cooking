@@ -1,0 +1,173 @@
+:root {
+  --primary-color: #ff8c00;
+  --secondary-color: #343a40;
+  --text-color: #333;
+  --light-gray: #f8f9fa;
+  --medium-gray: #6c757d;
+  --white: #ffffff;
+}
+
+/* Основные стили */
+.main-content {
+  padding: 30px;
+  margin-left: 250px;
+}
+
+.content-header {
+  margin-bottom: 30px;
+}
+
+.search-form {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.search-form input[type="text"] {
+  flex: 1;
+  min-width: 200px;
+  padding: 10px 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.search-form select {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.btn-search {
+  padding: 10px 20px;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn-clear {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+/* Стили карточек рецептов */
+.recipes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 25px;
+}
+
+.recipe-card {
+  background: var(--white);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.recipe-card:hover {
+  transform: translateY(-5px);
+}
+
+.recipe-image {
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.recipe-category {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: rgba(255,140,0,0.9);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.favorite-form {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+}
+
+.favorite-btn {
+  background: rgba(255,255,255,0.8);
+  border: none;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: var(--medium-gray);
+  transition: all 0.3s;
+}
+
+.favorite-btn.favorited {
+  color: #ff0000;
+}
+
+.favorite-btn:hover {
+  background: var(--white);
+  transform: scale(1.1);
+}
+
+.recipe-body {
+  padding: 20px;
+}
+
+.recipe-author {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.author-avatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.recipe-body h3 {
+  margin: 0 0 10px;
+  font-size: 18px;
+}
+
+.recipe-meta {
+  display: flex;
+  gap: 15px;
+  margin: 10px 0;
+  color: var(--medium-gray);
+  font-size: 14px;
+}
+
+.recipe-description {
+  color: var(--medium-gray);
+  margin: 15px 0;
+  font-size: 14px;
+}
+
+.recipe-actions {
+  margin-top: 20px;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .main-content {
+    margin-left: 0;
+    padding: 20px;
+  }
+  
+  .recipes-grid {
+    grid-template-columns: 1fr;
+  }
+}
